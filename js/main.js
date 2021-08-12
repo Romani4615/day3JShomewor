@@ -89,33 +89,10 @@ const lilWord = () => {
 }
 const getDaWord = () => {
     words = prompt('Here are your options, 1. ENTER BIG WORD/WORDS  2. ENTER BABY WORD/WORDS.')
-    greater10().then(bigWord()).catch(lilWord())
+    greater10(words).then(bigWord()).catch(lilWord())
 }
 getDaWord()
 
 
 
 
-
-// const isEvenNum = (num) => {
-//     return new Promise((resolve, reject) => {
-//         if (num % 2 === 0){
-//             resolve(true);
-//         }else{
-//             reject(false);
-//         }
-
-//     })
-// }
-// const handleSuccess = (result) =>{
-//     console.log('This was a success and here is the result: '+ result)
-// }
-// const handleFail = (err) =>{
-//     console.log('fail' + err)
-// }
-
-// const getNumber = () => {
-//     num = prompt('Please enter a number')
-//     isEvenNum(num).then(handleSucess).catch(handleFail);
-// }
-// isEvenNum(2)
